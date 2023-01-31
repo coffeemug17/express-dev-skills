@@ -1,8 +1,8 @@
 const skills = [
-    {skill: 'JavaScript', mastery: 'Intermediate', yearsExp: 1},
-    {skill: 'ExpressJS', mastery: 'Beginner', yearsExp: 1},
-    {skill: 'Python', mastery: 'Proficient', yearsExp: 4},
-    {skill: 'HTML/CSS', mastery: 'Intermediate', yearsExp: 2}
+    {name: 'JavaScript', mastery: 'Intermediate', yearsExp: 1},
+    {name: 'ExpressJS', mastery: 'Beginner', yearsExp: 1},
+    {name: 'Python', mastery: 'Proficient', yearsExp: 4},
+    {name: 'HTML/CSS', mastery: 'Intermediate', yearsExp: 2}
 ];
 
 module.exports = {
