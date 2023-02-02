@@ -7,13 +7,6 @@ module.exports = {
     create
 };
 
-function index(req, res) {
-    res.render('skills/index', {
-      skills: Skill.getAll(),
-      title: 'All of My Skills'
-    });
-  }
-
 function create(req, res) {
   console.log(req.body);
   // Models are responible for CRUD'ing the data
@@ -22,13 +15,20 @@ function create(req, res) {
   res.redirect('/skills');
 }
 
+function newSkill(req, res) {
+  res.render('skills/new', { title: 'New Skill'});
+}
+
+function index(req, res) {
+    res.render('skills/index', {
+      skills: Skill.getAll(),
+      title: 'All of My Skills'
+    });
+  }
+
 function show(req, res) {
   res.render('skills/show', {
     skill: Skill.getOne(req.params.id),
     title: "Detailed Skill"
   });
-}
-
-function newSkill(req, res) {
-  res.render('/skills/new', { title: 'New Skill'});
 }

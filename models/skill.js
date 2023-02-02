@@ -11,6 +11,13 @@ module.exports = {
     create
 }
 
+function create(skill) {
+    skill.yearsExp = Date.now() % 100;
+    skill.mastery = 'Beginner';
+    skill.name = skill.skill;
+    skills.push(skill);
+}
+
 function getAll() {
     return skills;
 }
@@ -18,10 +25,4 @@ function getAll() {
 function getOne(yrs) {
     yrs = parseInt(yrs);
     return skills.find(skill => skill.yearsExp === yrs);
-}
-
-function create(skill) {
-    skill.yearsExp = Date.now() % 100;
-    skill.mastery = 'Beginner';
-    skills.push(skill);
 }
