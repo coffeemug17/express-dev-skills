@@ -1,11 +1,14 @@
 <%- include('../partials/header') %>
-    <ul>
-      <% skills.forEach(function(s) { %>
-        <li>
-          <a href="/skills/<%= s.yearsExp%>"><%= s.name %></a>
-            - 
-          <%= s.mastery %>
-        </li>
-      <% }); %>
-    </ul>
+<ul>
+  <% skills.forEach(function(s) { %>
+    <li>
+      <a href="/skills/<%= s.yearsExp%>"><%= s.name %></a>
+        - 
+      <%= s.mastery %>
+    </li>
+  <% }); %>
+</ul>
+<a href="/skills/new"> Add a New Skill!</a>
+
+
 <%- include('../partials/footer') %>
