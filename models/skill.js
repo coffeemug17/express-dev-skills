@@ -8,7 +8,14 @@ const skills = [
 module.exports = {
     getAll,
     getOne,
-    create
+    create,
+    deleteOne
+}
+
+function deleteOne(yrs) {
+    yrs = parseInt(yrs);
+    const year = skills.findIndex(skill => skill.yearsExp === yrs);
+    skills.splice(year,1);
 }
 
 function create(skill) {

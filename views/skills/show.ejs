@@ -4,4 +4,12 @@
     <h3>Mastery: <%= skill.mastery%></h3>
     <h3>Years of Experience: <%= skill.yearsExp%></h3>
 
+    <form
+      action="/skills/<%=skill.yearsExp%>?_method=DELETE"
+      method="POST"
+      class="delete-form"
+    >
+      <button type="submit">Delete Skill</button>
+    </form>
+
     <%- include('../partials/footer') %>

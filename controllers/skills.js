@@ -4,8 +4,15 @@ module.exports = {
     index,
     show,
     new: newSkill,
-    create
+    create,
+    delete: deleteOne
 };
+
+function deleteOne(req, res) {
+  Skill.deleteOne(req.params.yearsExp);
+  res.redirect('/skills');
+}
+
 
 function create(req, res) {
   console.log(req.body);
